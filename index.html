@@ -2,21 +2,179 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Anton Krasnov — .NET Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Антон Краснов - C# Developer</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Иконки для резюме -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
 </head>
 <body>
-
-<header class="hero">
-    <h1>Антон Краснов</h1>
-    <p>Junior .NET Developer</p>
-
-    <div class="links">
-        <a href="https://github.com/AntoniKR" target="_blank">GitHub</a>
-        <a href="mailto:email@example.com">Email</a>
+    <div class="container">
+        <!-- ЛЕВАЯ КОЛОНКА (Сайдбар) -->
+        <aside class="sidebar">
+            <!-- Фото -->
+            <div class="photo-container">
+                <img src="./attachments/1.JPG" alt="Антон Краснов" class="my-photo">
+            </div>
+            
+            <!-- Контакты -->
+            <section class="contacts">
+                <h2>Контакты</h2>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +7 (937) 382-40-71</li>
+                    <li><i class="fas fa-envelope"></i>
+                        <a href="mailto:antonkrasnov.i75@gmail.com" target="_blank" rel="noopener noreferrer">
+                            antonkrasnov.i75@gmail.com
+                        </a>
+                    </li>
+                    <li><i class="fab fa-github"></i> 
+                        <a href="https://github.com/AntoniKR" target="_blank" rel="noopener noreferrer">
+                            GitHub
+                        </a>
+                    </li>
+                    <li><i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/antonkrasnovcheb/" target="_blank" rel="noopener noreferrer">
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li><i class="fas fa-map-marker-alt"></i> Нижний Новгород, Россия</li>                     
+                </ul>
+            </section>
+            
+            <!-- Навыки -->
+            <section class="skills">
+                <h2>Навыки</h2>
+                <div class="skill">
+                    <span>C#</span>
+                    <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>ООП</span>
+                    <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>ASP .NET</span>
+                    <div class="skill-bar"><div class="skill-level" style="width: 87%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>C++</span>
+                    <div class="skill-bar"><div class="skill-level" style="width: 73%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>HTML/CSS</span>
+                    <div class="skill-bar"><div class="skill-level" style="width: 81%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>C++</span>
+                    <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Python</span>
+                    <div class="skill-bar"><div class="skill-level" style="width: 78%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>PostgreSQL</span>
+                    <div class="skill-bar"><div class="skill-level" style="width: 82%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>ASP .NET</span>
+                    <div class="skill-bar"><div class="skill-level" style="width: 87%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="skill-bar"><div class="skill-level" style="width: 79%"></div></div>
+                </div>
+                
+                <!-- Добавьте остальные навыки -->
+            </section>
+            
+            <!-- Языки -->
+            <section class="languages">
+                <h2>Языки</h2>
+                <p> 
+                    <span class="flag-icon flag-icon-ru"></span>
+                    Русский (родной)
+                </p>
+                <p>
+                    <span class="flag-icon flag-icon-us"></span>
+                    Английский (B2)
+                </p>
+                <p>
+                    <span class="flag-icon flag-icon-es"></span>
+                    Испанский (A2)
+                </p>
+            </section>
+        </aside>
+        
+        <!-- ПРАВАЯ КОЛОНКА (Основной контент) -->
+        <main class="main-content">
+            <!-- Заголовок и должность -->
+            <header class="header">
+                <h1>Антон Краснов</h1>
+                <p class="position">C# Developer</p>
+                <p class="summary">Создаю интересные приложения и оптимизирую все, в том числе и производительность</p>
+            </header>
+            
+            <!-- Опыт работы -->
+            <section class="experience">
+                <h2><i class="fas fa-briefcase"></i> Опыт работы</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024 - настоящее время</div>
+                        <div class="timeline-content">
+                            <h3>Инженер-программист АСУ ТП</h3>
+                            <p class="company">ООО "Синтек"</p>
+                            <ul>
+                                <li>Разработка HMI интерфейсов для операторов, снижающих человеческий фактор на 40% </li>
+                                <hr class="responsibility-divider">
+                                <li>Создание и визуализация сложных технологических процессов для упрощения мониторинга, что привело к повышению юзабилити на 25%</li>
+                                <hr class="responsibility-divider">
+                                <li>Развертывание и настройка серверной инфраструктуры для SCADA-систем, что обеспечило бесперебойную работу 24/7 для > 10.000 сигналов на нескольких проектах</li>
+                                <hr class="responsibility-divider">
+                                <li>Конфигурация политики доступа, исключившая 100% внешних атак за год</li>
+                                <hr class="responsibility-divider">
+                                <li>Написание скриптов для обработки сигналов на объектах</li>
+                                <hr class="responsibility-divider">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Проекты -->
+            <section class="projects">
+                <h2><i class="fas fa-code"></i>Проекты</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Управление финансовыми активами</h3>
+                        <p>C#, ASP.NET MVC, PostgreSQL</p>
+                        <a href="#">Посмотреть проект →</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Образование -->
+            <section class="education">
+                <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024 - 2026</div>
+                        <div class="timeline-content">
+                            <h3>Нижегородский государственный технический университет им. Р.Е. Алексеева</h3>
+                            <p class="my-education">Магистратура</p>
+                            <ul>
+                                <li>Институт: Института радиоэлектроники и информационных технологий (ИРИТ)  </li>
+                                <li>Специальность: Информационные системы и технологии (ИСТ) </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+        </main>
     </div>
-</header>
-
-<script src="script.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
