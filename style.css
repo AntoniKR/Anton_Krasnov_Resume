@@ -186,6 +186,40 @@ h2 i {
   width: 100%;
   border-top: 3px solid #32a1ce;
 }
+
+.timeline-duration-with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    background: rgba(127, 140, 141, 0.1);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.timeline-duration-with-icon i {
+    font-size: 0.8rem;
+}
+
+/* Цветовые варианты */
+.timeline-duration-short {
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.1);
+}
+
+.timeline-duration-medium {
+    color: #f39c12;
+    background: rgba(243, 156, 18, 0.1);
+}
+
+.timeline-duration-long {
+    color: #27ae60;
+    background: rgba(39, 174, 96, 0.1);
+}
+
 /* Проекты */
 .project-grid {
     display: grid;
