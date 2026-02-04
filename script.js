@@ -34,29 +34,61 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Смена темы (день/ночь)
-const themeToggle = document.createElement('button');
-themeToggle.innerHTML = '🌙';
-themeToggle.className = 'theme-toggle';
-themeToggle.style.cssText = `
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-`;
-
-document.body.appendChild(themeToggle);
-
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    themeToggle.innerHTML = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+// QR код функционал
+document.addEventListener('DOMContentLoaded', function() {
+    // Элементы
+    const qrHeader = document.getElementById('qrHeader');
+    const qrModal = document.getElementById('qrModal');
+    const qrClose = document.querySelector('.qr-modal-close');
+    
+    // Проверяем, есть ли QR код на странице
+    if (!qrHeader) return;
+    
+    // Открытие модального окна при клике на QR код
+    qrHeader.addEventListener('click', function() {
+        qrModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    });
+    
+    // Функция закрытия модального окна
+    function closeQrModal() {
+        qrModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Закрытие модального окна
+    if (qrClose) {
+        qrClose.addEventListener('click', closeQrModal);
+    }
+    
+    // Закрытие при клике вне модального окна
+    if (qrModal) {
+        qrModal.addEventListener('click', function(event) {
+            if (event.target === qrModal) {
+                closeQrModal();
+            }
+        });
+    }
+    
+    // Закрытие по клавише Escape
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && qrModal && qrModal.style.display === 'block') {
+            closeQrModal();
+        }
+    });
+    
+    // Простая анимация при наведении
+    qrHeader.addEventListener('mouseenter', function() {
+        const wrapper = this.closest('.qr-wrapper');
+        if (wrapper) {
+            wrapper.style.transform = 'scale(1.15)';
+        }
+    });
+    
+    qrHeader.addEventListener('mouseleave', function() {
+        const wrapper = this.closest('.qr-wrapper');
+        if (wrapper) {
+            wrapper.style.transform = 'scale(1)';
+        }
+    });
 });

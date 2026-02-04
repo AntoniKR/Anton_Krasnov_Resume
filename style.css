@@ -9,6 +9,11 @@
 
 a {
     cursor: pointer;    
+    text-decoration: none;
+}
+a:hover {
+    color: green;
+    text-decoration: underline;
 }
 
 body {
@@ -195,48 +200,167 @@ h2 i {
     text-decoration: none;
 }
 
+/* QR код для вашей структуры */
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.qr-container-header {
+    flex-shrink: 0;
+}
+
+.qr-wrapper {
+    position: relative;
+    width: 200px; /* Уменьшили с 80px */
+    height: 200px; /* Уменьшили с 80px */
+    border-radius: 6px; /* Немного меньше скругление */
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Плавнее анимация */
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06); /* Легче тень */
+    background: white;
+    opacity: 0.85; /* Немного прозрачности */
+}
+
+.qr-wrapper:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-color: #3498db;
+}
+
+.qr-code-header {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 4px;
+    transition: all 0.4s ease;
+}
+
+.qr-hover-text {
+    display: none; /* Скрыть текст */
+}
+
+.qr-wrapper:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    border-color: #3498db;
+    box-shadow: 0 3px 8px rgba(52, 152, 219, 0.2);
+}
+
+.name-container-header {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.name-container-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Модальное окно */
+.qr-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.qr-modal-content {
+    background: white;
+    margin: 15vh auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: qrFadeIn 0.3s ease;
+}
+
+@keyframes qrFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.qr-modal-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    color: #777;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.qr-modal-close:hover {
+    color: #333;
+}
+
+.qr-modal-img {
+    width: 100%;
+    max-width: 250px;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+    border: 1px solid #eee;
+}
+
+.qr-modal-text {
+    color: #666;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
-    .container {
+    .header-wrapper {
         flex-direction: column;
-        margin: 10px;
+        gap: 20px;
+        text-align: center;
     }
     
-    .sidebar, .main-content {
-        width: 100%;
+    .qr-wrapper {
+        width: 70px;
+        height: 70px;
+        order: 1;
     }
     
-    .timeline-item {
-        flex-direction: column;
+    .name-container-header {
+        order: 2;
+        min-width: auto;
     }
     
-    .timeline-date {
-        width: 100%;
-        margin-bottom: 10px;
+    .qr-modal-content {
+        margin: 10vh auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-wrapper {
+        width: 60px;
+        height: 60px;
     }
     
-    .timeline-content {
-        padding-left: 0;
-        border-left: none;
-        border-top: 2px solid #3498db;
-        padding-top: 10px;
+    .qr-modal-img {
+        max-width: 200px;
     }
 }
-.dark-theme {
-    background: #1a1a1a;
-    color: #f0f0f0;
-}
-
-.dark-theme .container {
-    background: #2d2d2d;
-}
-
-.dark-theme .header h1 {
-    color: #f0f0f0;
-}
-
-.dark-theme .sidebar {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-}
-
-/* Добавьте в конец styles.css */

@@ -111,9 +111,22 @@
         <main class="main-content">
             <!-- Заголовок и должность -->
             <header class="header">
-                <h1>Антон Краснов</h1>
-                <p class="position">C# Developer</p>
-                <p class="summary">Создаю интересные приложения и оптимизирую все, в том числе и производительность</p>
+                <!-- Добавьте этот div-обертку в начало существующего header -->
+                <div class="header-wrapper">
+                    <!-- QR код слева -->
+                    <div class="qr-container-header">
+                        <div class="qr-wrapper">
+                            <img src="./attachments/Краснов_Антон.png" alt="QR Code - Антон Краснов" class="qr-code-header" id="qrHeader">
+                        </div>
+                    </div>
+                    
+                    <!-- Существующий контент заголовка (оберните в div) -->
+                    <div class="name-container-header">
+                        <h1>Антон Краснов</h1>
+                        <p class="position">C# Developer</p>
+                        <p class="summary">Создаю интересные приложения и оптимизирую все, в том числе и производительность</p>
+                    </div>
+                </div>
             </header>
             
             <!-- Опыт работы -->
@@ -176,5 +189,14 @@
     </div>
     
     <script src="script.js"></script>
+
+        <!-- Модальное окно для QR кода -->
+    <div class="qr-modal" id="qrModal">
+        <div class="qr-modal-content">
+            <span class="qr-modal-close">&times;</span>
+            <img src="./attachments/Краснов_Антон.png" alt="QR Code" class="qr-modal-img">
+            <p class="qr-modal-text">QR код для связи</p>
+        </div>
+    </div>
 </body>
 </html>
