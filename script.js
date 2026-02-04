@@ -29,7 +29,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Наблюдаем за всеми секциями
+// Наблюдение за всеми секциями
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });

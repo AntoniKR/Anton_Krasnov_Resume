@@ -33,7 +33,7 @@ body {
     overflow: hidden;
 }
 
-/* ЛЕВАЯ КОЛОНКА */
+/* Левая колонка */
 .sidebar {
     width: 30%;
     background:  #F5F5DC;
@@ -42,8 +42,8 @@ body {
 }
 
 .photo-container {
-width: 100%; /* Или конкретное значение */
-    text-align: center; /* Чтобы фото было по центру */
+width: 100%; 
+    text-align: center; 
     
 }
 .my-photo {
@@ -52,6 +52,14 @@ width: 100%; /* Или конкретное значение */
     border-radius: 50%;
     border: 5px solid #3498db;
     object-fit: cover;
+}
+
+.logo-photo {
+    width: 16px; 
+    height: 16px;
+    margin-right: 13px;
+    vertical-align: middle;
+    object-fit: contain;
 }
 
 .sidebar h2 {
@@ -96,7 +104,7 @@ width: 100%; /* Или конкретное значение */
     border-radius: 4px;
 }
 
-/* ПРАВАЯ КОЛОНКА */
+/* Правая колонка */
 .main-content {
     width: 70%;
     padding: 40px;
@@ -127,7 +135,6 @@ width: 100%; /* Или конкретное значение */
     margin: 0 auto;
 }
 
-/* Секции */
 section {
     margin-bottom: 40px;
 }
@@ -147,7 +154,8 @@ h2 i {
 /* Таймлайн для опыта */
 .timeline-item {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .timeline-date {
@@ -173,6 +181,10 @@ h2 i {
     font-style: italic;
     margin: 5px 0 10px;
     text-decoration: underline;
+}
+.create-line {
+  width: 100%;
+  border-top: 3px solid #32a1ce;
 }
 /* Проекты */
 .project-grid {
@@ -200,7 +212,7 @@ h2 i {
     text-decoration: none;
 }
 
-/* QR код для вашей структуры */
+/* QR код */
 .header-wrapper {
     display: flex;
     align-items: center;
@@ -219,16 +231,15 @@ h2 i {
 
 .qr-wrapper {
     position: relative;
-    width: 200px; /* Уменьшили с 80px */
-    height: 200px; /* Уменьшили с 80px */
-    border-radius: 6px; /* Немного меньше скругление */
+    width: 200px; 
+    height: 200px; 
+    border-radius: 6px; 
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Плавнее анимация */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
     border: 1px solid #e0e0e0;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06); /* Легче тень */
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06); 
     background: white;
-    opacity: 0.85; /* Немного прозрачности */
 }
 
 .qr-wrapper:hover {
@@ -243,10 +254,6 @@ h2 i {
     object-fit: cover;
     padding: 4px;
     transition: all 0.4s ease;
-}
-
-.qr-hover-text {
-    display: none; /* Скрыть текст */
 }
 
 .qr-wrapper:hover {
@@ -283,11 +290,11 @@ h2 i {
 
 .qr-modal-content {
     background: white;
-    margin: 15vh auto;
-    padding: 30px;
+    margin: 20vh auto;
+    padding: 20px;
     border-radius: 12px;
     width: 90%;
-    max-width: 350px;
+    max-width: 500px;
     text-align: center;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -315,10 +322,10 @@ h2 i {
 
 .qr-modal-img {
     width: 100%;
-    max-width: 250px;
-    margin: 20px auto;
+    max-width: 500px;
+    margin: 1px auto;
     border-radius: 10px;
-    padding: 10px;
+    padding: 1px;
     background: white;
     border: 1px solid #eee;
 }
@@ -331,6 +338,14 @@ h2 i {
 
 /* Адаптивность */
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 10px;
+    }
+    
+    .sidebar, .main-content {
+        width: 100%;
+    }
     .header-wrapper {
         flex-direction: column;
         gap: 20px;
