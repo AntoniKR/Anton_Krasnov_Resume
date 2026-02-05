@@ -13,6 +13,7 @@
 <body>
     <div class="container">
         <!-- Левая колонка -->
+         
         <aside class="sidebar">
             
             <div class="photo-container">
@@ -48,45 +49,12 @@
             <!-- Навыки -->
             <section class="skills">
                 <h2>Навыки</h2>
-                <div class="skill">
-                    <span>C#</span>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>ООП</span>
-                    <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>ASP .NET</span>
-                    <div class="skill-bar"><div class="skill-level" style="width: 87%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>C++</span>
-                    <div class="skill-bar"><div class="skill-level" style="width: 73%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>HTML/CSS</span>
-                    <div class="skill-bar"><div class="skill-level" style="width: 81%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>C++</span>
-                    <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>Python</span>
-                    <div class="skill-bar"><div class="skill-level" style="width: 78%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>PostgreSQL</span>
-                    <div class="skill-bar"><div class="skill-level" style="width: 82%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>ASP .NET</span>
-                    <div class="skill-bar"><div class="skill-level" style="width: 87%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>JavaScript</span>
-                    <div class="skill-bar"><div class="skill-level" style="width: 79%"></div></div>
+
+                <div class="simple-skills">
+                    <p><strong>Основные:</strong> C# / .NET, ASP.NET Core, Entity Framework, PostgreSQL, JavaScript, HTML, CSS, Python, C++, REST API, Dependency Injection</p>
+                    <p><strong>Промышленные:</strong> SCADA/HMI (Alpha.HMI), OPC UA, Modbus TCP, WinForms, Real-time Systems, High-load Architecture</p>
+                    <p><strong>Инструменты:</strong> Git, GitHub, Docker, Visual Studio, Swagger</p>
+                    <p><strong>Архитектура:</strong> MVC, Microservices, SOLID, Design Patterns, Unit Testing, Database Design</p>
                 </div>
             </section>
             
@@ -131,8 +99,8 @@
                 <h2><i class="fas fa-briefcase"></i> Опыт работы</h2>
                 <div class="timeline">
                     
-                    <!-- Самозанятый 2026 -->
-                    <div class="timeline-item">
+                    <!-- Winforms QR код -->
+                    <div class="timeline-item" style="--item-index: 0;">
                         <div class="timeline-date">Январь 2026 — настоящее время
                             <span class="timeline-duration-with-icon">
                                 <i class="far fa-clock"></i> 1 месяц
@@ -141,27 +109,50 @@
                         <div class="timeline-content">
                             <h3>Разработчик C# .NET</h3>
                             <p class="company">Самозанятый / Фриланс / Индивидуальный предприниматель</p>
-                            <ul>
-                                <li>Проектирование и разработка удобного десктопного приложения Winforms для автоматизации создания цифровых контактов сотрудников на C# ASP.NET</li>
-                                <hr class="responsibility-divider">
-                                <li>Сокращение времени обмена контактами с 60 секунд до 2-4 секунд</li>
-                                <hr class="responsibility-divider">
-                                <li>Повышение скорости и качества оформления новых контактов сотрудников на 65%, благодаря выплывающему списку при вводе данных</li>
-                                <hr class="responsibility-divider">
-                                <li>Стандартизация формата контактов</li>
-                                <hr class="responsibility-divider">
-                                <li>Реализация работы с файловой системой для увеличения производительности на 70% с помощью FolderBrowserDialog</li>
-                                <hr class="responsibility-divider">
-                                <li>Интеграция модуля генерации QR кодов с использованием библиотеки QRCoder</li>
-                                <hr class="responsibility-divider">
-                                <li>Повышение надежности с помощью валидации введенных номеров телефона и данных сотрудника для обеспечения корректности созданных контактов</li>
-                                <hr class="responsibility-divider">
+
+                        <div class="responsibilities-section">
+                            <h4 class="section-title">
+                                <i class="fas fa-tasks section-icon"></i>
+                                Ключевые обязанности
+                            </h4>
+                            <ul class="responsibilities-list">
+                                <li><strong>Проектирование и полная разработка</strong> удобного десктопного приложения Winforms для автоматизации создания цифровых контактов сотрудников на C# ASP.NET</li>
+                                <li><strong>Реализация модуля работы с файловой системой</strong> для сохранения и загрузки контактов, интеграция стандартных диалогов Windows.</li>
+                                <li><strong>Разработка системы валидации</strong> вводимых данных (телефоны, имена) для обеспечения целостности информации.</li>
+                                <li><strong>Интеграция библиотеки QRCoder</strong> для генерации QR-кодов с контактной информацией.</li>
                             </ul>
                         </div>
+                        <div class="achievements-section">
+                            <h4 class="section-title">
+                                <i class="fas fa-chart-line section-icon"></i>
+                                Результаты и достижения
+                            </h4>
+                            <ul class="achievements-list">
+                                <li>
+                                    <div class="achievement-item">
+                                        <div class="achievement-metric">Сократил время обмена контактом <span class="metric-value">с 60 секунд до 2-4 секунд</span></div>
+                                        <div class="achievement-details">благодаря автоматизации процесса вместо ручного ввода и поиска в адресной книге.</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="achievement-item">
+                                        <div class="achievement-metric">Повысил скорость и качество ввода данных <span class="metric-value">на 65%</span></div>
+                                        <div class="achievement-details">за счет реализации всплывающих подсказок и автодополнения при вводе.</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="achievement-item">
+                                        <div class="achievement-metric">Увеличил производительность операций с файлами <span class="metric-value">на 70%</span></div>
+                                        <div class="achievement-details">оптимизировав логику работы с файловой системой (FolderBrowserDialog) и кэшированием.</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
                     </div>
-                    
+                    <hr class="responsibility-divider">             
                     <!-- Синтек -->
-                    <div class="timeline-item">
+                    <div class="timeline-item" style="--item-index: 1;">
                         <div class="timeline-date">Август 2024 — настоящее время
                             <span class="timeline-duration-with-icon">
                                 <i class="far fa-clock"></i> 1 год 7 месяцев
@@ -170,29 +161,58 @@
                         <div class="timeline-content">
                             <h3>Инженер-программист АСУ ТП</h3>
                             <p class="company">ООО "Синтек"</p>
-                            <ul>
-                                <li>Разработка высоконагруженных систем реального времени с требованиями к отказоустойчивости и безопасности</li>
-                                <hr class="responsibility-divider">
-                                <li>Создание мнемосхем, графических панелей управления технологическими процессами в среде разработки Alpha.HMI, которые сократили время реакции оператора на 45%</li>
-                                <hr class="responsibility-divider">
-                                <li>Настройка резервирования серверов и отказоустойчивых каналов связи повысила доступность системы на 99.9%</li>
-                                <hr class="responsibility-divider">
-                                <li>Реализация логики визуализации с помощью динамической смены цвета и состояния объектов</li>
-                                <hr class="responsibility-divider">
-                                <li>Автоматизация рутинных операций за счет создания группового управления агрегатами, что исключило 5-7 рутинных операций в час для оператора</li>
-                                <hr class="responsibility-divider">
-                                <li>Успешно было введено больше 5 систем на разных станциях</li>
-                                <hr class="responsibility-divider">
-                                <li>Развертывание и настройка серверов сбора данных (OPC-серверов, Modbus TCP)</li>
-                                <hr class="responsibility-divider">
-                                <li>Настройка политики доступа для разных групп пользователей</li>
-                                <hr class="responsibility-divider">
+
+                        <div class="responsibilities-section">
+                            <h4 class="section-title">
+                                <i class="fas fa-tasks section-icon"></i>
+                                Ключевые обязанности и проекты
+                            </h4>
+                            <ul class="responsibilities-list">
+                                <li><strong>Разработка высоконагруженных SCADA систем</strong> реального времени с требованиями к отказоустойчивости и безопасности</li>
+                                <li><strong>Настройка серверной инфраструктуры.</strong> Развертывание, конфигурация и поддержка серверов сбора данных (OPC-серверы), настройка обмена данными по протоколам Modbus TCP, обеспечение отказоустойчивости.</li>
+                                <li><strong>Реализация бизнес-логики.</strong> Программирование логики визуализации (динамическая смена цвета, состояния объектов), создание алгоритмов группового управления оборудованием.</li>
+                                <li><strong>Информационная безопасность.</strong> Настройка политик разграничения доступа для различных групп пользователей (операторы, инженеры, администраторы).</li>
                             </ul>
                         </div>
+
+                        <div class="achievements-section">
+                            <h4 class="section-title">
+                                <i class="fas fa-chart-line section-icon"></i>
+                                Результаты и достижения
+                            </h4>
+                            <ul class="achievements-list">
+                                <li>
+                                    <div class="achievement-item">
+                                        <div class="achievement-metric">Сократил среднее время реакции оператора на аварийные события <span class="metric-value">на 45%</span></div>
+                                        <div class="achievement-details">за счет оптимизации интерфейсов и логики оповещения в созданных мнемосхемах.</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="achievement-item">
+                                        <div class="achievement-metric">Повысил доступность и отказоустойчивость системы <span class="metric-value">до 99.9%</span></div>
+                                        <div class="achievement-details">благодаря реализации резервирования каналов связи и серверов сбора данных.</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="achievement-item">
+                                        <div class="achievement-metric">Автоматизировал <span class="metric-value">5-7 рутинных операций</span> в час для оператора</div>
+                                        <div class="achievement-details">путем разработки функций группового управления агрегатами, что снизило влияние человеческого фактора.</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="achievement-item">
+                                        <div class="achievement-metric">Успешно внедрил <span class="metric-value">более 5 промышленных систем</span> на разных объектах</div>
+                                        <div class="achievement-details">с полным циклом работ: от проектирования до ввода в эксплуатацию.</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
                     </div>
+                    <hr class="responsibility-divider">
                     
-                    <!-- Самозанятый 2025-2026 -->
-                    <div class="timeline-item">
+                    <!-- Приложение для управления финансами -->
+                    <div class="timeline-item" style="--item-index: 2;">
                         <div class="timeline-date">Сентябрь 2025 — Январь 2026
                             <span class="timeline-duration-with-icon">
                                 <i class="far fa-clock"></i> 5 месяцев
@@ -201,44 +221,65 @@
                         <div class="timeline-content">
                             <h3>Fullstack-разработчик (C#, ASP.NET)</h3>
                             <p class="company">Самозанятый / Фриланс / Индивидуальный предприниматель</p>
-                            <ul>
-                                <li>Создание с нуля полнофункционального приложения на C# ASP.NET, позволяющее пользователям в реальном времени отслеживать стоимость своего инвестиционного портфеля, агрегированную из разных источников</li>
-                                <hr class="responsibility-divider">
-                                <li>Проектирование и разработка реляционной БД на PostgreSQL (10 связанных таблиц) для хранения данных активов и пользователей</li>
-                                <hr class="responsibility-divider">
-                                <li>Сокращение времени отслеживания портфеля с 15-20 минут до 1-2 минуты, благодаря автоматическому построению графиков с текущими суммами</li>
-                                <hr class="responsibility-divider">
-                                <li>Обеспечение актуальности данных, благодаря парсингу данных с 5 разных сайтов</li>
-                                <hr class="responsibility-divider">
-                                <li>Разработка архитектуры приложения по паттерну MVC, обеспечив разделение ответственности и масштабируемость</li>
-                                <hr class="responsibility-divider">
-                                <li>Реализация системы аутентификации и авторизации пользователей. Пароли хранятся в хэшированном виде с помощью библиотеки BCrypt</li>
-                                <hr class="responsibility-divider">
-                                <li>Организация работы с данными через Entity Framework, включая миграции и LINQ-запросы</li>
-                                <hr class="responsibility-divider">
-                                <li>Настройка внедрения зависимостей (Dependency Injection) для гибкости и тестирования кода</li>
-                                <hr class="responsibility-divider">
-                                <li>Разработка модуля для парсинга актуальных рыночных данных</li>
-                                <hr class="responsibility-divider">
-                                <li>Обеспечение полной изоляции данных между пользователями благодаря привязке активов к ID пользователя</li>
-                                <hr class="responsibility-divider">
+
+                        <div class="responsibilities-section">
+                            <h4 class="section-title">
+                                <i class="fas fa-tasks section-icon"></i>
+                                Ключевые обязанности
+                            </h4>
+                            <ul class="responsibilities-list">
+                                <li><strong>Создание с нуля полнофункционального приложения на C# ASP.NET</strong> позволяющее пользователям в реальном времени отслеживать стоимость своего инвестиционного портфеля, агрегированную из разных источников</li>
+                                <li><strong>Проектирование и разработка реляционной БД на PostgreSQL</strong> для хранения данных активов и пользователей</li>
+                                <li><strong>Разработка архитектуры приложения по паттерну MVC</strong> обеспечив разделение ответственности и масштабируемость</li>
+                                <li><strong>Обеспечение полной изоляции данных</strong> между пользователями благодаря привязке активов к ID пользователя</li>
+                                <li><strong>Реализация системы аутентификации и авторизации пользователей</strong> с использованием бибилиотеки BCrypt для хранения паролей в хэшированном виде</li>
+                                <li><strong>Разработка модуля для парсинга</strong> актуальных рыночных данных</li>
+                                <li><strong>Настройка внедрения зависимостей (Dependency Injection)</strong> для гибкости и тестирования кода</li>
+                                <li><strong>Организация работы с данными через Entity Framework</strong> включая миграции и LINQ-запросы</li>
                             </ul>
                         </div>
-                    </div>
-                    
+                        <div class="achievements-section">
+                            <h4 class="section-title">
+                                <i class="fas fa-chart-line section-icon"></i>
+                                Результаты и достижения
+                            </h4>
+                            <ul class="achievements-list">
+                                <li>
+                                    <div class="achievement-item">
+                                        <div class="achievement-metric">Сократил время остлеживания портфеля <span class="metric-value">с 15-20 минут до 1-2 минуты</span></div>
+                                        <div class="achievement-details">благодаря автоматическому построению графиков с текущими суммами</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="achievement-item">
+                                        <div class="achievement-metric">Обеспечил <span class="metric-value">100% изоляцию данных</span> между пользователями</div>
+                                        <div class="achievement-details">через строгую привязку всех операций и активов к ID пользователя на уровне архитектуры БД и бизнес-логики.</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="achievement-item">
+                                        <div class="achievement-metric">Написал парсеры для <span class="metric-value">5 разных сайтов</span></div>
+                                        <div class="achievement-details">обеспечив актуальность данных о текущих ценах на активы и портфеля</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="achievement-item">
+                                        <div class="achievement-metric">Спроектировал БД на PostgreSQL c <span class="metric-value">10 взаимосвязанными таблицами</span></div>
+                                        <div class="achievement-details">обеспечив целостность, хранение и связь данных активов и пользователей</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+
+                            
+
+                    </div>                    
                 </div>
             </section>
-            <!-- Проекты 
-            <section class="projects">
-                <h2><i class="fas fa-code"></i>Проекты</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Управление финансовыми активами</h3>
-                        <p>C#, ASP.NET MVC, PostgreSQL</p>
-                        <a href="#">Посмотреть проект →</a>
-                    </div>
-                </div>
-            </section> -->
+
             <!-- Образование -->
             <section class="education">
                 <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
@@ -248,21 +289,21 @@
                         <div class="timeline-content">
                             <h3>Нижегородский государственный технический университет им. Р.Е. Алексеева</h3>
                             <p class="my-education">Магистратура</p>
-                            <ul>
-                                <li>Институт: Института радиоэлектроники и информационных технологий (ИРИТ)  </li>
-                                <li>Специальность: Информационные системы и технологии (ИСТ) </li>                                
+                            <ul class="education-list">
+                                <li><strong>Институт:</strong> Институт радиоэлектроники и информационных технологий (ИРИТ)</li>
+                                <li><strong>Специальность:</strong> Информационные системы и технологии (ИСТ)</li>                                
                             </ul>
                         </div>
                     </div>
-                    <div class="create-line"></div>
+                    <hr class="responsibility-divider">  
                     <div class="timeline-item">
                         <div class="timeline-date">2020 - 2024</div>
                         <div class="timeline-content">
                             <h3>Нижегородский государственный технический университет им. Р.Е. Алексеева</h3>
                             <p class="my-education">Бакалавриат</p>
-                            <ul>
-                                <li>Институт: Института радиоэлектроники и информационных технологий (ИРИТ)  </li>
-                                <li>Специальность: Информационные системы и технологии (ИСТ) </li>                                
+                            <ul class="education-list">
+                                <li><strong>Институт:</strong> Институт радиоэлектроники и информационных технологий (ИРИТ)</li>
+                                <li><strong>Специальность:</strong> Информационные системы и технологии (ИСТ)</li>                                
                             </ul>
                         </div>
                     </div>

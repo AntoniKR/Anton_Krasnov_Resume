@@ -36,6 +36,29 @@ document.querySelectorAll('section').forEach(section => {
 
 // QR код функционал
 document.addEventListener('DOMContentLoaded', function() {
+    // Простая версия анимации при скролле
+    const simpleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    // Добавляем классы для анимации
+    document.querySelectorAll('.experience, .education').forEach(el => {
+        el.classList.add('fade-in-element');
+        simpleObserver.observe(el);
+    });
+
+    document.querySelectorAll('.timeline-item').forEach(el => {
+        el.classList.add('fade-in-element');
+        simpleObserver.observe(el);
+    });
+
+
     // Элементы
     const qrHeader = document.getElementById('qrHeader');
     const qrModal = document.getElementById('qrModal');
@@ -92,3 +115,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+

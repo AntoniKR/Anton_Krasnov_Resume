@@ -86,22 +86,24 @@ width: 100%;
 }
 
 /* Навыки */
-.skill {
-    margin: 15px 0;
+.simple-skills {
+    margin-top: 15px;
 }
 
-.skill-bar {
-    height: 8px;
-    background: rgb(124, 142, 111);
-    border-radius: 4px;
-    margin-top: 5px;
-    overflow: hidden;
+.simple-skills p {
+    margin-bottom: 12px;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+    line-height: 1.5;
 }
 
-.skill-level {
-    height: 100%;
-    background: #3498db;
-    border-radius: 4px;
+.simple-skills p:hover {
+    background: #edf5fc;
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.1);
 }
 
 /* Правая колонка */
@@ -182,9 +184,24 @@ h2 i {
     margin: 5px 0 10px;
     text-decoration: underline;
 }
-.create-line {
-  width: 100%;
-  border-top: 3px solid #32a1ce;
+.education-list {
+    list-style: none;
+    padding-left: 0;
+}
+.education-list li {
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.education-list li::before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
 }
 
 .timeline-duration-with-icon {
@@ -204,47 +221,6 @@ h2 i {
     font-size: 0.8rem;
 }
 
-/* Цветовые варианты */
-.timeline-duration-short {
-    color: #e74c3c;
-    background: rgba(231, 76, 60, 0.1);
-}
-
-.timeline-duration-medium {
-    color: #f39c12;
-    background: rgba(243, 156, 18, 0.1);
-}
-
-.timeline-duration-long {
-    color: #27ae60;
-    background: rgba(39, 174, 96, 0.1);
-}
-
-/* Проекты */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.project-card a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #3498db;
-    text-decoration: none;
-}
 
 /* QR код */
 .header-wrapper {
@@ -274,12 +250,6 @@ h2 i {
     border: 1px solid #e0e0e0;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06); 
     background: white;
-}
-
-.qr-wrapper:hover {
-    transform: scale(1.15);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    border-color: #3498db;
 }
 
 .qr-code-header {
@@ -370,6 +340,111 @@ h2 i {
     font-size: 1rem;
 }
 
+
+
+/* Стили для детальных разделов внутри опыта работы */
+.section-title {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin: 25px 0 12px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.section-icon {
+    color: #3498db;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* Блок обязанностей */
+.responsibilities-section {
+    margin-top: 20px;
+}
+
+.responsibilities-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.responsibilities-list li {
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.responsibilities-list li::before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+}
+
+/* Блок достижений */
+.achievements-section {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(52, 152, 219, 0.05), rgba(46, 204, 113, 0.03));
+    border-radius: 10px;
+    border-left: 4px solid #2ecc71;
+}
+
+.achievements-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.achievements-list li {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.achievements-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.achievement-item {
+    line-height: 1.5;
+}
+
+.achievement-metric {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.05rem;
+    margin-bottom: 5px;
+}
+
+.metric-value {
+    color: #27ae60; /* Зеленый для метрик */
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.achievement-details {
+    color: #555;
+    font-size: 0.95rem;
+    padding-left: 15px;
+    border-left: 2px solid #bdc3c7;
+}
+/* Простая анимация для тестирования */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* Адаптивность */
 @media (max-width: 768px) {
     .container {
@@ -400,6 +475,10 @@ h2 i {
     .qr-modal-content {
         margin: 10vh auto;
         padding: 20px;
+    }
+    
+    .achievements-section {
+        padding: 15px;
     }
 }
 
