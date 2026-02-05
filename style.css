@@ -455,6 +455,15 @@ h2 i {
     .sidebar, .main-content {
         width: 100%;
     }
+    
+    .sidebar {
+        padding: 25px 20px;
+    }
+    
+    .main-content {
+        padding: 25px 20px;
+    }
+    
     .header-wrapper {
         flex-direction: column;
         gap: 20px;
@@ -462,9 +471,10 @@ h2 i {
     }
     
     .qr-wrapper {
-        width: 70px;
-        height: 70px;
+        width: 100px;
+        height: 100px;
         order: 1;
+        margin: 0 auto;
     }
     
     .name-container-header {
@@ -474,21 +484,200 @@ h2 i {
     
     .qr-modal-content {
         margin: 10vh auto;
-        padding: 20px;
+        padding: 15px;
+    }
+    
+    /* Адаптация секций опыта работы и образования */
+    section {
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .position {
+        font-size: 1.1rem;
+    }
+    
+    .summary {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    /* Адаптация timeline для мобильных */
+    .timeline-item {
+        flex-direction: column;
+        margin-bottom: 25px;
+        margin-top: 20px;
+    }
+    
+    .timeline-date {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .timeline-content {
+        padding-left: 0;
+        border-left: none;
+        border-top: 2px solid #3498db;
+        padding-top: 15px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    
+    .company {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+    
+    /* Адаптация разделов внутри */
+    .section-title {
+        font-size: 1rem;
+        margin: 20px 0 10px 0;
+    }
+    
+    .responsibilities-list li,
+    .achievements-list li,
+    .education-list li {
+        padding-left: 20px;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
     }
     
     .achievements-section {
         padding: 15px;
+        margin-top: 20px;
+    }
+    
+    .achievement-metric {
+        font-size: 1rem;
+    }
+    
+    .achievement-details {
+        font-size: 0.9rem;
+        padding-left: 10px;
+    }
+    
+    /* Делаем метрики более читаемыми на мобильных */
+    .metric-value {
+        display: inline-block;
+        margin-top: 3px;
+    }
+    
+    /* Адаптация разделителей */
+    .responsibility-divider {
+        margin: 20px 0;
+    }
+    
+    /* Контакты в сайдбаре */
+    .sidebar li {
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+    
+    .sidebar i {
+        width: 18px;
+        margin-right: 8px;
+    }
+    
+    /* Навыки в сайдбаре */
+    .simple-skills p {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .my-photo {
+        width: 150px;
+        height: 150px;
     }
 }
 
 @media (max-width: 480px) {
     .qr-wrapper {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
     
     .qr-modal-img {
         max-width: 200px;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .position {
+        font-size: 1rem;
+    }
+    
+    .summary {
+        font-size: 0.95rem;
+    }
+    
+    /* Еще более компактная версия для маленьких экранов */
+    .timeline-date {
+        font-size: 0.85rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .timeline-duration-with-icon {
+        margin-left: 0;
+        margin-top: 5px;
+        font-size: 0.8rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+    
+    .company {
+        font-size: 0.9rem;
+    }
+    
+    /* Уменьшаем отступы */
+    .sidebar {
+        padding: 20px 15px;
+    }
+    
+    .main-content {
+        padding: 20px 15px;
+    }
+    
+    /* Адаптация списков */
+    .responsibilities-list li,
+    .achievements-list li,
+    .education-list li {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .achievement-item {
+        line-height: 1.4;
+    }
+    
+    /* Улучшаем отображение метрик */
+    .achievement-metric {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .metric-value {
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }

@@ -1,40 +1,4 @@
-// Плавная прокрутка для навигации
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if(targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if(targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 20,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Анимация появления элементов при скролле
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting) {
-            entry.target.classList.add('animate');
-        }
-    });
-}, observerOptions);
-
-// Наблюдение за всеми секциями
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-});
-
-// QR код функционал
+// QR код и скролл элементов
 document.addEventListener('DOMContentLoaded', function() {
     // Простая версия анимации при скролле
     const simpleObserver = new IntersectionObserver((entries) => {
